@@ -35,3 +35,7 @@ Ele opera em nível de pixel, comparando os valores dos pixels vizinhos com o va
 - skimage
 - progress.bar
 - cv2
+
+## Link do vídeo de apresentação (o tamanho ultrapassou o permitido)
+
+- https://drive.google.com/drive/folders/12QRvBfS3qmtL03mcNfSMVBMW6c3Kj0pe?usp=sharing
