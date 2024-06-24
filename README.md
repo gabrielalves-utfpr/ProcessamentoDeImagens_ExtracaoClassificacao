@@ -25,3 +25,13 @@ Ele opera em nível de pixel, comparando os valores dos pixels vizinhos com o va
 - **MLP** -> 89.28%
 - **RF** -> 96.42%
 - **SVM** -> 87.50%
+
+## Bibliotecas Utilizadas
+
+- tkinter
+- matplotlib
+- sklearn
+- numpy
+- skimage
+- progress.bar
+- cv2
