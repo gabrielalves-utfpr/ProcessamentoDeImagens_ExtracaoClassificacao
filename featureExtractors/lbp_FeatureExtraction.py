@@ -46,16 +46,16 @@ def getData(path):
 
 def extractLBPFeatures(images):
     bar = Bar('[INFO] Extraindo características LBP...', max=len(images), suffix='%(index)d/%(max)d  Duração:%(elapsed)ds')
-    featuresList = []
+    featuresList = [] #lista para armazenar características
     for image in images:
-        if len(image.shape) > 2: 
-            image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        lbp_image = local_binary_pattern(image, P=8, R=1, method='uniform')
-        hist, _ = np.histogram(lbp_image.ravel(), bins=np.arange(0, 10), range=(0, 10))
-        featuresList.append(hist)
+        if len(image.shape) > 2:  #verifica se a imagem é colorida
+            image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) #converte para escala de cinza
+        lbp_image = local_binary_pattern(image, P=8, R=1, method='uniform') #calcula o padrão binário (LBP)
+        hist, _ = np.histogram(lbp_image.ravel(), bins=np.arange(0, 10), range=(0, 10)) # calcula histograma dos valores LBP com 9 bins
+        featuresList.append(hist) #adiciona o historgrama a lista 
         bar.next()
     bar.finish()
-    return np.array(featuresList, dtype=object)
+    return np.array(featuresList, dtype=object) #retorna a lista de características
 
 # Restante do código permanece igual
 
